@@ -1,27 +1,10 @@
 spring:
   profiles:
     active: local
+    include: oauth
 
-  datasource:
-    driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mysql://localhost/oauth?characterEncoding=UTF-8&serverTimezone=UTC
-    username: root
-    password: password
-
-  jpa:
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        #        show_sql: sql
-        format_sql: true
-    open-in-view: false
-
-  jackson:
-    property-naming-strategy: SNAKE_CASE
-
-logging:
-  level:
-    com.example.oauth: trace
-    org.hibernate.SQL: debug
-    org.hibernate.type: trace
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+      schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
