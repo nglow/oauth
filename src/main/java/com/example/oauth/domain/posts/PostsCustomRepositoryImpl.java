@@ -18,10 +18,10 @@ public class PostsCustomRepositoryImpl implements PostsCustomRepository{
 
 
     @Override
-    public List<Posts> retrievePostsList(long offset, long limit) {
+    public List<Posts> retrievePostsList() {
         return queryFactory.selectFrom(posts)
-                .offset(offset * limit)
-                .limit(limit)
+                .offset(0 * 4)
+                .limit(4)
                 .orderBy(posts.id.desc()).fetch();
     }
 }

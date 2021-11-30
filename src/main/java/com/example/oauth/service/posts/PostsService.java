@@ -45,7 +45,7 @@ public class PostsService {
 //                .map(PostsListResponseDto::from)
 //                .collect(Collectors.toList());
 
-        return postsRepository.retrievePostsList(0, 4).stream()
+        return postsRepository.retrievePostsList().stream()
                 .map(PostsListResponseDto::from)
                 .collect(Collectors.toList());
     }
