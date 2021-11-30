@@ -1,6 +1,14 @@
 version: '3.9'
 
 services:
+  server:
+    image: oauth:0.0.1
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - 8081:8080
+
   db:
     image: mariadb:10
     restart: unless-stopped

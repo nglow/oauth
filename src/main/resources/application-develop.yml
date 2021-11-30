@@ -1,12 +1,9 @@
 spring:
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost/oauth?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mariadb://db/oauth?characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: password
-
-    initialization-mode: always
-    data: classpath:db/data.sql
 
   jpa:
     hibernate:
@@ -27,6 +24,6 @@ spring:
 
 logging:
   level:
-    com.example.oauth: trace
+    com.example.oauth: debug
     org.hibernate.SQL: debug
     org.hibernate.type: trace

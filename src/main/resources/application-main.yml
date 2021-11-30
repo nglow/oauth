@@ -1,16 +1,13 @@
 spring:
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost/oauth?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mariadb://somewhere/oauth?characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: password
 
-    initialization-mode: always
-    data: classpath:db/data.sql
-
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     properties:
       hibernate:
         format_sql: true
@@ -19,7 +16,7 @@ spring:
   session:
     store-type: jdbc
     jdbc:
-      initialize-schema: always
+      initialize-schema: never
       schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
 
   jackson:
@@ -27,6 +24,6 @@ spring:
 
 logging:
   level:
-    com.example.oauth: trace
+    com.example.oauth: info
     org.hibernate.SQL: debug
     org.hibernate.type: trace
