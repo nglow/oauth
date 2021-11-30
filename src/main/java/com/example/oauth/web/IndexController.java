@@ -1,5 +1,7 @@
 package com.example.oauth.web;
 
+import com.example.oauth.config.security.LoginUser;
+import com.example.oauth.config.security.dto.SessionUser;
 import com.example.oauth.service.posts.PostsService;
 import com.example.oauth.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -23,8 +25,12 @@ public class IndexController {
     }
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
+
+        if (user != null) {
+            model.addAttribute("userName", user.getName());
+        }
 
         return "index";
     }
