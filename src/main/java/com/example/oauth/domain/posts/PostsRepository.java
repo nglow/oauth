@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface PostsRepository extends JpaRepository<Posts, Long> {
+public interface PostsRepository extends JpaRepository<Posts, Long>, PostsCustomRepository {
 
     @Query("select p from Posts p order by p.id desc")
     List<Posts> findAllDesc();

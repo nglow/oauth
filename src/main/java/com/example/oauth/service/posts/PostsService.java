@@ -41,7 +41,11 @@ public class PostsService {
     }
 
     public List<PostsListResponseDto> findAllDesc() {
-        return postsRepository.findAllDesc().stream()
+//        return postsRepository.findAllDesc().stream()
+//                .map(PostsListResponseDto::from)
+//                .collect(Collectors.toList());
+
+        return postsRepository.retrievePostsList(0, 4).stream()
                 .map(PostsListResponseDto::from)
                 .collect(Collectors.toList());
     }

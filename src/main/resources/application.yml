@@ -2,9 +2,3 @@ spring:
   profiles:
     active: local
     include: oauth
-
-  session:
-    store-type: jdbc
-    jdbc:
-      initialize-schema: always
-      schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
