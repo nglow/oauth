@@ -1,5 +1,5 @@
-# 💻 OAuth
-
+# 💻 Spring Boot OAuth
+Spring Boot OAuth tutorial
 ## 📚 Content
 1. Reference book
 2. Reference book refactoring version
