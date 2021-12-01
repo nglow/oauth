@@ -32,7 +32,7 @@
 #### 1.Application
 * Spring Boot(v2.4.13), Spring Security, Spring Data JPA, Querydsl
 
-####2. Container
+#### 2. Container
 * Docker
 * Docker-Compose
 
