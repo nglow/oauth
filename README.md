@@ -1,10 +1,10 @@
 # 💻 Spring Boot OAuth
 Spring Boot OAuth tutorial
-## 📚 Content
-1. Reference book
-2. Reference book refactoring version
-3. To be in CFI project...
 
+## 📚 Content
+1. Reference Book
+2. Refactoring and CFI
+3. What we have to **Do!**
 
 ## 📒 Reference Book
 ### Architecture
@@ -25,17 +25,39 @@ Spring Boot OAuth tutorial
 * SSH
 * Shell Script
 
-## 📔 Reference Book Refactoring Version
+## 📔 Refactoring and CFI
 ### Architecture
-![freelec](./image/freelec-refac.png)
+![freelec_refac](./image/freelec-refac.png)
 
-#### 1.Application
-* Spring Boot(v2.4.13), Spring Security, Spring Data JPA, Querydsl
+#### 1. Backend
+* **_Java_**, Javascript 
+* **_Spring_**, Node.js (Express.js, Nest.js…)
 
-#### 2. Container
-* Docker
-* Docker-Compose
+#### 2. Frontend
+* Javascript, html, css
+* **_Vue.js 3_**, Template Engine(<s>JSP</s>, Thymeleaf)
+#### 3. Database
+* **_MariaDB_**, PostgreSQL, MySQL, Oracle 
+* **_H2_**, Redis, Memcached
+* Elastic Search, MongoDB, InfluxDB
+#### 4. Version Control
+* **_Git_**, SVN
+* **_Github_**, Gitlab, Bitbucket, AWS CodeCommit
+#### 5. CI/CD
+* AWS CodePipeline, Jenkins, CircleCI, Travis CI, Bamboo
+#### 6. Virtualization
+* Hypervisor-based: VirtualBox, VMWare
+* Container-based(Kernel-Sharing): Docker...
+#### 7. Container Registry
+* Docker Hub, Harbor, K8S-Container Registry, Github Container Registry, AWS ECR
+#### 8.Container Orchestration Platform
+* **_Kubernetes(K8S)_**, Docker Swarm, Apache Mesos… 
+* EKS, GKE, AKS
 
+## 👨‍💻 What we have to Do!
+### 1. Seminar
+
+### 2. CFI Project
 
 ## 📖 Reference
 * 스프링 부트와 AWS로 혼자 구현하는 웹 서비스
